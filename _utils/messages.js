@@ -9,6 +9,14 @@ const errorMsg = {
     PASSWORDLEN: "Password length can not be less than 8",
   },
 
+  appointment: {
+    CREATE: "Error creating appointment",
+    UPDATE: "Error updating appointment",
+    DELETE: "Error deleting appointment",
+    GETONE: "Error retreiving appointment",
+    GETALL: "Error retreiving all appointments",
+  },
+
   pagination: {
     SURPASS: "There is nothing here",
   },
@@ -31,6 +39,12 @@ const successMsg = {
     CREATE: "User created succsessfully",
     UPDATE: "User updated succsessfully",
     DELETE: "User deleted succsessfully",
+  },
+
+  appointment: {
+    CREATE: "Appointment created sucessfully",
+    UPDATE: "Appointment updated sucessfully",
+    DELETE: "Appointment deleted sucessfully",
   },
 };
 

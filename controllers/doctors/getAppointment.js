@@ -1,3 +1,4 @@
+const { errorMsg } = require("../../_utils/messages");
 const { Appointment } = require("../../models");
 
 module.exports = async (req, res) => {
@@ -12,7 +13,7 @@ module.exports = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       status: "Error",
-      message: error.message,
+      message: errorMsg.appointment.GETALL,
     });
   }
 };

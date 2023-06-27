@@ -21,7 +21,7 @@ module.exports = async (req, res) => {
   } catch (error) {
     res.status(500).json({
       status: "error",
-      message: error.message,
+      message: errorMsg.user.GETONE,
     });
   }
 };

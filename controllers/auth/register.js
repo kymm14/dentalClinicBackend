@@ -27,7 +27,7 @@ module.exports = async (req, res) => {
       email,
       password: hash,
       birthday,
-      id_role: 2, // role = user
+      id_role: 2, // role = user / patient
     };
 
     const user = await User.create(newUser);

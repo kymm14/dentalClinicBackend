@@ -1,3 +1,4 @@
+const { successMsg, errorMsg } = require("../../_utils/messages");
 const { Appointment } = require("../../models");
 
 module.exports = async (req, res) => {
@@ -8,12 +9,12 @@ module.exports = async (req, res) => {
       where: { id: appointment.id },
     });
     res.status(200).json({
-      message: "Appointment deleted sucessfully",
+      message: successMsg.appointment.DELETE,
     });
   } catch (error) {
     res.status(500).json({
       status: "Error",
-      message: error.message,
+      message: errorMsg.appointment.DELETE,
     });
   }
 };

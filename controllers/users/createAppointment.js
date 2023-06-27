@@ -1,3 +1,4 @@
+const { successMsg, errorMsg } = require("../../_utils/messages");
 const { Appointment } = require("../../models");
 
 module.exports = async (req, res) => {
@@ -9,12 +10,12 @@ module.exports = async (req, res) => {
     await Appointment.create(createAppointment);
 
     res.status(200).json({
-      message: "Appointment created successfully",
+      message: successMsg.appointment.CREATE,
     });
   } catch (error) {
     res.status(500).json({
       status: "error",
-      message: error.message,
+      message: errorMsg.appointment.CREATE,
     });
   }
 };
