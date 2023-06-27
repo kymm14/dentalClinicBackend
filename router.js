@@ -4,7 +4,7 @@ const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 const authRouter = require("./routes/auth");
 const adminRouter = require("./routes/admin");
-const patientRouter = require("./routes/patient");
+const doctorRouter = require("./routes/doctor");
 
 // home page
 router.use("/", indexRouter);
@@ -18,7 +18,7 @@ router.use("/auth", authRouter);
 // admin
 router.use("/admin", adminRouter);
 
-// patient
-router.use("/patient", patientRouter);
+// doctior
+router.use("/doctor", doctorRouter);
 
 module.exports = router;

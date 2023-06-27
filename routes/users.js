@@ -1,14 +1,17 @@
 const express = require("express");
-const userController = require("../controllers/patients");
+const userController = require("../controllers/users");
 const verifyToken = require("../middelwares/verifyToken");
-const isAdmin = require("../middelwares/isAdmin");
+const isUser = require("../middelwares/isUser");
 const router = express.Router();
 
 /* GET users listing. */
-router.get("/:id", verifyToken, userController.getAppointment);
-router.get("/profile", verifyToken, userController.getProfile);
+router.get("/profile", verifyToken, isUser, userController.getMyProfile);
+router.get("/appointments", verifyToken, isUser, userController.getAppointment);
+// router.get("/:id", verifyToken, userController.getProfile);
 
 // /* PUT users listing */
-router.put("/update", verifyToken, userController.updateProfile);
+router.put("/update", verifyToken, isUser, userController.updateMyProfile);
+
+router.delete("/delete", verifyToken, isUser, userController.deleteAppointment);
 
 module.exports = router;

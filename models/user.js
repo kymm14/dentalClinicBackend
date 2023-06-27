@@ -12,13 +12,13 @@ module.exports = (sequelize, DataTypes) => {
       // User {1}..{01} Doctor
       User.hasMany(models.Doctor, {
         as: "doctor",
-        foreignKey: "id_doctors", // foreignKey en Doctor
+        foreignKey: "id_doctor", // foreignKey en Doctor
       });
 
       // User {1}..{01} Patient
       User.hasMany(models.Patient, {
         as: "patient",
-        foreignKey: "id_patients", // foreignKey en Patient
+        foreignKey: "id_patient", // foreignKey en Patient
       });
     }
   }

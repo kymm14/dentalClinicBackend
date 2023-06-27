@@ -6,12 +6,14 @@ const router = express.Router();
 
 /* GET users listing. */
 router.get("/users", verifyToken, isAdmin, adminController.getAll);
-router.get("/profile", verifyToken, isAdmin, adminController.getProfile);
+router.get("/patients", verifyToken, isAdmin, adminController.getPatients);
 router.get("/doctors", verifyToken, isAdmin, adminController.getDoctors);
-router.get("/patients", verifyToken, adminController.getPatients);
 router.get("/:id", verifyToken, isAdmin, adminController.getById);
 
 // /* PUT users listing */
-router.put("/profile/update/:id", verifyToken, isAdmin, adminController.updateProfile);
+router.put("/profile/update/:id",verifyToken,isAdmin,adminController.updateProfile);
+
+// Delete appointment
+router.delete("/delete", verifyToken, isAdmin, adminController.deleteAppointment);
 
 module.exports = router;

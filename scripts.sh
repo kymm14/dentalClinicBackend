@@ -16,7 +16,7 @@ sequelize model:generate --name Doctor --attributes 'id_user:integer'
 sequelize model:generate --name Patient --attributes 'id_user:integer'
 
 # crear modelo Appointment
-sequelize model:generate --name Appointment --attributes 'id_doctors:integer,id_patients:integer,date:date,time:time'
+sequelize model:generate --name Appointment --attributes 'id_doctor:integer,id_patient:integer,date:date,time:time'
 
 # Ejecutar migraciones
 sequelize db:migrate ## para todas
