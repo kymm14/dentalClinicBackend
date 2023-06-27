@@ -56,6 +56,15 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+
+      {
+        id_doctor: 3,
+        id_patient: 1,
+        date: "2023-08-18",
+        time: "15:00",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 
