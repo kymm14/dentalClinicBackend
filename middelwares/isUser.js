@@ -1,7 +1,7 @@
 module.exports = (req, res, next) => {
   const userRole = req.userRole;
 
-  if (userRole == "user") {
+  if (userRole == "patient") {
     next();
   } else {
     res.status(403).json({

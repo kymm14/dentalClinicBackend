@@ -11,6 +11,8 @@ router.get("/appointments", verifyToken, isUser, userController.getAppointment);
 
 // /* PUT users listing */
 router.put("/update", verifyToken, isUser, userController.updateMyProfile);
+router.put("/update/appointment", verifyToken, isUser, userController.modifyAppointment);
+router.put("/create/appointment", verifyToken, isUser, userController.createAppointment);
 
 router.delete("/delete", verifyToken, isUser, userController.deleteAppointment);
 

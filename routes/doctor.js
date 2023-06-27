@@ -7,5 +7,6 @@ const router = express.Router();
 /* GET users listing. */
 router.get("/patients", verifyToken, isDoctor, doctorController.getPatients);
 router.get("/appointments", verifyToken, isDoctor, doctorController.getAppointment);
+router.get("/profile", verifyToken, isDoctor, doctorController.getMyProfile);
 
 module.exports = router;
