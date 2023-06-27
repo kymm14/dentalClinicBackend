@@ -1,12 +1,6 @@
 const { errorMsg } = require("../../_utils/messages");
 const { User } = require("../../models");
 
-/**
- * Obtener alumno por id.
- * Ejemplo url: [GET] http://localhost:3000/api/alumnos/1
- * @param {*} req    Request object
- * @param {*} res    Response object
- */
 module.exports = async (req, res) => {
   const { id } = req.params;
 

@@ -3,15 +3,16 @@ const { Model } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Appointment extends Model {
     static associate(models) {
-      // Patient {1}--{1..n} Doctors
+      // Appointment {1}--{1..n} Doctors
       Appointment.hasMany(models.Doctor, {
         as: "doctor",
-        foreignKey: "id_doctor", // foreignKey en Doctors
+        foreignKey: "id_doctor", // foreignKey en Doctor
       });
 
+      // Appointment {1}--{1..n} Patients
       Appointment.hasMany(models.Patient, {
         as: "patient",
-        foreignKey: "id_patient", // foreignKey en Doctors
+        foreignKey: "id_patient", // foreignKey en Patient
       });
     }
   }

@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "id_user", // foreignKey de Doctor
       });
 
-      // Doctor {0..n}--{1..n} Patient
+      // Doctor {0..n}--{1..n} Appointments
       Doctor.belongsToMany(models.Appointment, {
         through: "appointments",
         foreignKey: "id_doctor", // foreignKey en Appointment

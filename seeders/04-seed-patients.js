@@ -23,19 +23,19 @@ module.exports = {
       },
 
       {
-        id_user: 8, // 3
+        id_user: 8, // 4
         createdAt: new Date(),
         updatedAt: new Date(),
       },
 
       {
-        id_user: 9, // 3
+        id_user: 9, // 5
         createdAt: new Date(),
         updatedAt: new Date(),
       },
 
       {
-        id_user: 10, // 3
+        id_user: 10, // 6
         createdAt: new Date(),
         updatedAt: new Date(),
       },

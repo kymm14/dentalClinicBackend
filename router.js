@@ -18,7 +18,7 @@ router.use("/auth", authRouter);
 // admin
 router.use("/admin", adminRouter);
 
-// doctior
+// doctor
 router.use("/doctor", doctorRouter);
 
 module.exports = router;

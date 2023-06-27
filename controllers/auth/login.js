@@ -1,17 +1,8 @@
 const bcrypt = require("bcrypt");
 const { generateToken } = require("../../_utils/token");
 const { errorMsg, successMsg } = require("../../_utils/messages");
+const { Role, User } = require("../../models");
 
-const { Role, User, Patient } = require("../../models");
-
-const test = require("../../models");
-
-/**
- * Login user
- * Url example: [POST] http://localhost:3000/auth/login
- * @param {*} req Request object
- * @param {*} res Response object
- */
 module.exports = async (req, res) => {
   const { email, password } = req.body;
 

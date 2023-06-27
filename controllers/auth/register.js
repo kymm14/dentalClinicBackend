@@ -2,12 +2,6 @@ const bcrypt = require("bcrypt");
 const { Patient, User } = require("../../models");
 const { successMsg, errorMsg } = require("../../_utils/messages");
 
-/**
- * Create new user
- * Url example: [POST] http://localhost:3000/auth/register
- * @param {*} req Request object
- * @param {*} res Response object
- */
 module.exports = async (req, res) => {
   const { name, last_name, email, password, birthday } = req.body;
 

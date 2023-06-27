@@ -1,8 +1,6 @@
 const { errorMsg } = require("../../_utils/messages");
 const { User } = require("../../models");
 
-const models = require("../../models/index");
-
 module.exports = async (req, res) => {
   let { page } = req.query;
 
