@@ -51,7 +51,7 @@ Tecnologías utilizadas:
 
 ## Diagrama BD
 
-!['img-dentalClinic'](./img/dentalClinic.png)
+!['images-dentalClinic'](public/images/dentalClinic.png)
 
 ## Instalación en local
 
@@ -69,22 +69,19 @@ Tecnologías utilizadas:
 
 - AUTH
 
-  - Registrar 
+  - Registrar
 
-          POST http://localhost:3000/auth/register/alumno
+          POST http://localhost:3000/auth/register
 
     body:
 
     ```js
         {
-            "nombre" : "Bob",
-            "apellidos": "Cooper",
+            "name" : "Bob",
+            "last_name": "Cooper",
             "email": "bob@cooper.com",
+            "birthday": "2002-02-02",
             "password": "12345678",
-            "fecha_nacimiento": "2002-02-02",
-            "activo": "si",
-            "id_nacionalidad": 1,
-            "id_direccion": 2
         }
     ```
 
@@ -101,75 +98,39 @@ Tecnologías utilizadas:
         }
     ```
 
-- ALUMNOS
+- ADMIN
 
-  - Obtener todos los alumnos
+  - Obtener todos los usuarios
 
-          GET http://localhost:3000/api/alumnos?page=1
+          GET http://localhost:3000/admin/users
 
-  - Obtener alumno por id
+  - Obtener paciente por id
 
-          GET http://localhost:3000/api/alumnos/:id
+          GET http://localhost:3000/api/users/:id
 
-  - Obtener alumnos por nombre
+  - Obtener perfil de paciente
 
-          GET http://localhost:3000/api/alumnos/nombre/:name
+          GET http://localhost:3000/api/users/profile
 
-  - Obtener perfil de alumno
+  - Actualizar perfil de paciente
 
-          GET http://localhost:3000/api/alumnos/profile
-
-  - Actualizar perfil de alumno
-
-          PUT http://localhost:3000/api/alumnos/profile
+          PUT http://localhost:3000/api/users/update
 
     body:
 
     ```js
         {
-            "apellidos": "Brown",
-            "fecha_nacimiento": "2000-01-01",
-            "password": "123456789"
+            "last_name": "Brown",
+            "birthday": "2000-01-01",
+            "password": "12345678"
         }
     ```
-
-- USUARIOS - Obtener todos los usuarios (incluye alumnos)
-
-              GET http://localhost:3000/api/users?page=1
 
   </details>
 
 ## Futuras funcionalidades
 
-[ ] Añadir mas end-points para la gestión de usuarios (incluye alumnos)  
-[ ] Añadir end-points para la gestión de cursos  
-[ ] Añadir logs con winston  
-[ ] Validaciones de la solicitud con express-validator
-
-## Contribuciones
-
-Las sugerencias y aportaciones son siempre bienvenidas.
-
-Puedes hacerlo de dos maneras:
-
-1. Abriendo una issue
-2. Crea un fork del repositorio
-   - Crea una nueva rama
-     ```
-     $ git checkout -b feature/nombreUsuario-mejora
-     ```
-   - Haz un commit con tus cambios
-     ```
-     $ git commit -m 'feat: mejora X cosa'
-     ```
-   - Haz push a la rama
-     ```
-     $ git push origin feature/nombreUsuario-mejora
-     ```
-   - Abre una solicitud de Pull Request
-
-## Contacto
-
-<a href="https://www.linkedin.com/in/fidel-gilart-gilart/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+[ ] Añadir mas end-points para la gestión de usuarios  
+[ ] Añadir end-points para la gestión de citas
 
 </p>
