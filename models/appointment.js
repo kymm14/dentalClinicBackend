@@ -4,13 +4,13 @@ module.exports = (sequelize, DataTypes) => {
   class Appointment extends Model {
     static associate(models) {
       // Appointment {1}--{1..n} Doctors
-      Appointment.hasMany(models.Doctor, {
+      Appointment.belongsTo(models.Doctor, {
         as: "doctor",
         foreignKey: "id_doctor", // foreignKey en Doctor
       });
 
       // Appointment {1}--{1..n} Patients
-      Appointment.hasMany(models.Patient, {
+      Appointment.belongsTo(models.Patient, {
         as: "patient",
         foreignKey: "id_patient", // foreignKey en Patient
       });

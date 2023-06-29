@@ -22,7 +22,7 @@ module.exports = async (req, res) => {
     const patients = await User.findAll({
       where: { id_role: 2 },
       attributes: {
-        exclude: ["password", "createdAt", "updatedAt"],
+        exclude: ["id", "password", "createdAt", "updatedAt", "id_role"],
       },
     });
     res.status(200).json(patients);

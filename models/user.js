@@ -10,15 +10,15 @@ module.exports = (sequelize, DataTypes) => {
       });
 
       // User {1}..{01} Doctor
-      User.hasMany(models.Doctor, {
+      User.hasOne(models.Doctor, {
         as: "doctor",
-        foreignKey: "id_doctor", // foreignKey en Doctor
+        foreignKey: "id_user", // foreignKey en Doctor
       });
 
       // User {1}..{01} Patient
-      User.hasMany(models.Patient, {
+      User.hasOne(models.Patient, {
         as: "patient",
-        foreignKey: "id_patient", // foreignKey en Patient
+        foreignKey: "id_user", // foreignKey en Patient
       });
     }
   }

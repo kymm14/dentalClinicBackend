@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   try {
     const users = await User.findByPk(id, {
       attributes: {
-        exclude: ["password", "createdAt", "updatedAt", "id_role"],
+        exclude: ["password", "createdAt", "updatedAt"],
       },
     });
 

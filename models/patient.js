@@ -10,7 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       });
 
       // Patient {0..n}--{1..n} Appointments
-      Patient.belongsToMany(models.Appointment, {
+      Patient.hasOne(models.Appointment, {
         through: "appointments",
         foreignKey: "id_patient", // foreignKey en Appointments
       });

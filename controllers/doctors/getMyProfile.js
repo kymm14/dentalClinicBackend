@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
     const users = await User.findOne({
       where: { id: userId },
       attributes: {
-        exclude: ["password", "createdAt", "updatedAt", "id_role"],
+        exclude: ["id", "password", "createdAt", "updatedAt", "id_role"],
       },
     });
 

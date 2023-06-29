@@ -9,16 +9,16 @@ const doctorRouter = require("./routes/doctor");
 // home page
 router.use("/", indexRouter);
 
-// users
-router.use("/api/users", usersRouter);
-
 // authentication
 router.use("/auth", authRouter);
 
 // admin
-router.use("/admin", adminRouter);
+router.use("/api/admin", adminRouter);
+
+// users
+router.use("/api/users", usersRouter);
 
 // doctor
-router.use("/doctor", doctorRouter);
+router.use("/api/doctor", doctorRouter);
 
 module.exports = router;

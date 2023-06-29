@@ -1,11 +1,13 @@
 const { successMsg, errorMsg } = require("../../_utils/messages");
-const { Appointment } = require("../../models");
+const { Appointment, Patient } = require("../../models");
 
 module.exports = async (req, res) => {
   const { userId } = req;
 
   try {
-    const createAppointment = { ...req.body };
+    const patient = await Patient.findOne({ where: { id_user: userId } });
+
+    const createAppointment = { ...req.body, id_patient: patient.id };
 
     await Appointment.create(createAppointment);
 

@@ -2,11 +2,11 @@ const { successMsg, errorMsg } = require("../../_utils/messages");
 const { Appointment } = require("../../models");
 
 module.exports = async (req, res) => {
-  const { userId } = req;
+  const { id } = req.params;
   try {
     const modify = { ...req.body };
 
-    await Appointment.update(modify, { where: { id: userId } });
+    await Appointment.update(modify, { where: { id: id } });
     res.status(200).json({
       message: successMsg.appointment.UPDATE,
     });
