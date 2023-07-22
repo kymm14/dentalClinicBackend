@@ -20,7 +20,6 @@ module.exports = async (req, res) => {
       last_name,
       email,
       password: hash,
-      birthday,
       id_role: 2, // role = user / patient
     };
 
@@ -47,6 +46,7 @@ module.exports = async (req, res) => {
     res.status(statusCode).json({
       status: "Error",
       message: errorMsg.user.CREATE,
+      error,
     });
   }
 };

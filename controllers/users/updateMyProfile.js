@@ -15,5 +15,6 @@ module.exports = async (req, res) => {
       status: "error",
       message: errorMsg.user.UPDATE,
     });
+    console.log(error);
   }
 };

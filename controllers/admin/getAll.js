@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   page = +page;
   if (!page || page < 0) page = 1;
 
-  const LIMIT = 4;
+  const LIMIT = 10;
   const userCount = await User.count();
   const maxPages = Math.ceil(userCount / LIMIT);
 

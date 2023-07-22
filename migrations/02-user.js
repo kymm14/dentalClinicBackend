@@ -19,7 +19,7 @@ module.exports = {
       },
       birthday: {
         type: Sequelize.DATEONLY,
-        allowNull: false,
+        allowNull: true,
       },
       email: {
         type: Sequelize.STRING,
