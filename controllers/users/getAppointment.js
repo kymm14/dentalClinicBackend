@@ -37,6 +37,7 @@ module.exports = async (req, res) => {
 
     const filteredAppointment = appointments.map((a) => {
       return {
+        id: a.id,
         date: a.date,
         time: a.time,
         doctor: {
