@@ -39,6 +39,46 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
+      {
+        id_user: 11, // 7
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_user: 12, // 8
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_user: 13, // 9
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_user: 14, // 10
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_user: 15, // 11
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_user: 16, // 12
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_user: 17, // 13
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_user: 18, // 14
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
     ]);
   },
 

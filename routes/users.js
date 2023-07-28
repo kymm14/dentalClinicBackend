@@ -10,6 +10,7 @@ router.get("/doctors", verifyToken, userController.getDoctors);
 
 // PUT
 router.put("/update", verifyToken, userController.updateMyProfile);
+router.put("/appointment", verifyToken, userController.getAppointmentById);
 
 // POST
 router.post("/create/appointment", verifyToken, userController.createAppointment);
@@ -18,4 +19,5 @@ router.post("/create/appointment", verifyToken, userController.createAppointment
 router.delete("/delete/appointment", verifyToken, userController.deleteAppointment);
 
 router.put("/update/appointment/:id", verifyToken, userController.modifyAppointment);
+
 module.exports = router;

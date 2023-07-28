@@ -7,5 +7,6 @@ userController.getDoctors = require("./getDoctors");
 userController.deleteAppointment = require("./deleteAppointment");
 userController.modifyAppointment = require("./modifyAppointment");
 userController.createAppointment = require("./createAppointment");
+userController.getAppointmentById = require("./getAppointmentById");
 
 module.exports = userController;

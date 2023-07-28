@@ -104,9 +104,89 @@ module.exports = {
           name: "Sofia", // 10
           last_name: "Fernandez",
           birthday: "1969-01-16",
-          email: "miles@fernandez.com",
+          email: "sofia@fernandez.com",
           password: encryptedPassword,
           id_role: 2, // patient
+          updatedAt: new Date(),
+          createdAt: new Date(),
+        },
+        {
+          name: "Luis", // 11
+          last_name: "Gomez",
+          birthday: "1985-06-22",
+          email: "luis@gomez.com",
+          password: encryptedPassword,
+          id_role: 2,
+          updatedAt: new Date(),
+          createdAt: new Date(),
+        },
+        {
+          name: "Ana", // 12
+          last_name: "Martinez",
+          birthday: "1990-03-11",
+          email: "ana@martinez.com",
+          password: encryptedPassword,
+          id_role: 2,
+          updatedAt: new Date(),
+          createdAt: new Date(),
+        },
+        {
+          name: "Carlos", // 13
+          last_name: "Lopez",
+          birthday: "1978-09-05",
+          email: "carlos@lopez.com",
+          password: encryptedPassword,
+          id_role: 2,
+          updatedAt: new Date(),
+          createdAt: new Date(),
+        },
+        {
+          name: "Laura", // 14
+          last_name: "Perez",
+          birthday: "1982-12-30",
+          email: "laura@perez.com",
+          password: encryptedPassword,
+          id_role: 2,
+          updatedAt: new Date(),
+          createdAt: new Date(),
+        },
+        {
+          name: "Miguel", // 15
+          last_name: "Rodriguez",
+          birthday: "1995-11-08",
+          email: "miguel@rodriguez.com",
+          password: encryptedPassword,
+          id_role: 2,
+          updatedAt: new Date(),
+          createdAt: new Date(),
+        },
+        {
+          name: "Isabel", // 16
+          last_name: "Sanchez",
+          birthday: "1974-04-18",
+          email: "isabel@sanchez.com",
+          password: encryptedPassword,
+          id_role: 2,
+          updatedAt: new Date(),
+          createdAt: new Date(),
+        },
+        {
+          name: "Pedro", // 17
+          last_name: "Ramirez",
+          birthday: "1987-07-25",
+          email: "pedro@ramirez.com",
+          password: encryptedPassword,
+          id_role: 2,
+          updatedAt: new Date(),
+          createdAt: new Date(),
+        },
+        {
+          name: "Elena", // 18
+          last_name: "Gonzalez",
+          birthday: "1993-02-14",
+          email: "elena@gonzalez.com",
+          password: encryptedPassword,
+          id_role: 2,
           updatedAt: new Date(),
           createdAt: new Date(),
         },

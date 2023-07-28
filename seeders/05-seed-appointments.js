@@ -12,7 +12,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
       {
         id_doctor: 1,
         id_patient: 2,
@@ -21,7 +20,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
       {
         id_doctor: 2,
         id_patient: 3,
@@ -38,7 +36,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
       {
         id_doctor: 3,
         id_patient: 5,
@@ -47,7 +44,6 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
       {
         id_doctor: 3,
         id_patient: 6,
@@ -56,12 +52,51 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
       },
-
       {
-        id_doctor: 3,
-        id_patient: 1,
+        id_doctor: 2,
+        id_patient: 7,
         date: "2023-08-18",
         time: "15:00",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_doctor: 3,
+        id_patient: 8,
+        date: "2023-08-21",
+        time: "09:00",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_doctor: 1,
+        id_patient: 9,
+        date: "2023-09-16",
+        time: "14:00",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_doctor: 2,
+        id_patient: 12,
+        date: "2023-10-18",
+        time: "15:30",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_doctor: 1,
+        id_patient: 14,
+        date: "2023-11-28",
+        time: "14:00",
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        id_doctor: 2,
+        id_patient: 10,
+        date: "2023-09-10",
+        time: "17:00",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
