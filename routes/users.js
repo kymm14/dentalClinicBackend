@@ -10,9 +10,9 @@ router.get("/doctors", verifyToken, userController.getDoctors);
 
 // PUT
 router.put("/update", verifyToken, userController.updateMyProfile);
-router.put("/appointment", verifyToken, userController.getAppointmentById);
 
 // POST
+router.post("/appointment", verifyToken, userController.getAppointmentById);
 router.post("/create/appointment", verifyToken, userController.createAppointment);
 
 // DELETE
