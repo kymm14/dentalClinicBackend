@@ -36,18 +36,6 @@ module.exports = async (req, res) => {
       ],
     });
 
-    // "id": 15,
-    // "date": "2023-10-28",
-    // "time": "13:30:00",
-    // "doctor": {
-    //     "id_user": 2,
-    //     "user": {
-    //         "name": "Fabrizzio",
-    //         "last_name": "Bongiorno",
-    //         "email": "fabrizzio@bongiorno.com"
-    //     }
-    // }
-
     res.status(200).json(appointment);
   } catch (error) {
     res.status(500).json({

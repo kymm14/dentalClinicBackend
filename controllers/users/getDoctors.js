@@ -1,5 +1,5 @@
 const { errorMsg } = require("../../_utils/messages");
-const { User } = require("../../models");
+const { User, Doctor } = require("../../models");
 
 module.exports = async (req, res) => {
   let { page } = req.query;
@@ -7,7 +7,7 @@ module.exports = async (req, res) => {
   page = +page;
   if (!page || page < 0) page = 1;
 
-  const LIMIT = 4;
+  const LIMIT = 1;
   const userCount = await User.count();
   const maxPages = Math.ceil(userCount / LIMIT);
 
@@ -19,11 +19,17 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const doctors = await User.findAll({
-      where: { id_role: 3 },
+    const doctors = await Doctor.findAll({
       attributes: {
         exclude: ["password", "createdAt", "updatedAt"],
       },
+      include: [
+        {
+          model: User,
+          as: "user",
+          attributes: ["name", "last_name"],
+        },
+      ],
     });
     res.status(200).json(doctors);
   } catch (error) {
